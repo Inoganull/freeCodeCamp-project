@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+  <title>CAFE</title>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1 id="title">CAFE</h1>
+        <p id="description">Thank you for taking the time to help us improve our CAFE</p>
+      </header>
+
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input id="name" name="name" type="text" class="form-control" placeholder="Enter your name" value="" required></input>
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input id="email" name="email" type="email" class="form-control" placeholder="Enter your Email" value="" required></input>
+        </div>
+        <div class="form-group">
+          <label for="number" id="number-label">Age
+(optional)
+</label>
+          <input id="number" name="age" type="number" min="10" max="90" class="form-control" placeholder="Age" value=""></input>
+        </div>
+        <div class="form-group">
+          <p>Gender</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>How do you know CAFE?</p>
+          <label>
+            <input name="user-aware" value="review" type="radio" class="input-radio" checked />Review platfoms
+          </label>
+          <label>
+            <input name="user-aware" value="relative" type="radio" class="input-radio" />From friends or family
+            </label>
+          <label>
+            <input name="user-aware" value="social-media" type="radio" class="input-radio" />Social media
+          </label>
+          <label>
+            <input name="user-aware" value="passing" type="radio" class="input-radio" />Passed by the shop while walking/driving
+          </label>
+        </div>
+        <div class="form-group">
+          <p>What is your favorite in CAFE</p>
+          <select id="most-like" name="most-like" class="form-control" required>
+            <option disabled selected>Select an option</option>
+            <option value="pricing">Pricing</option>
+            <option value="ambiance">Ambiance</option>
+            <option value="quality-and-taste">Quality and Taste</option>
+            <option value="ordering-experience">Ordering Experience</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
+          <label><input name="prefer" value="italian" type="checkbox" class="input-checkbox" />Italian-Style</label>
+          <label><input name="prefer" value="french" type="checkbox" class="input-checkbox" />French-Style</label>
+          <label><input name="prefer" value="american" type="checkbox" class="input-checkbox" />American-Style</label>
+          <label><input name="prefer" value="japanese" type="checkbox" class="input-checkbox" />Japanese-Style</label>
+          <label><input name="prefer" value="australian" type="checkbox" class="input-checkbox" />Australian-Style</label>
+          <label><input name="prefer" value="snacks" type="checkbox" class="input-checkbox" />Snacks</label>
+          <label><input name="prefer" value="beverge" type="checkbox" class="input-checkbox" />Beverage</label>
+        </div>
+        <div class="form-group">
+          <p>Suggestions of Improvement & Additional Comments</p>
+          <textarea id="comments" name="comment" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
