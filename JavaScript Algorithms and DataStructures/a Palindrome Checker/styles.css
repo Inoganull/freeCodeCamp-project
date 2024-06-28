@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #98fb98; /* Light green for description text */
+}
+
+.card {
+    background-color: #222; /* Dark gray background for cards */
+    border: 1px solid #333; /* Slightly lighter gray for border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for card effect */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #000; /* Black input background */
+    color: #fff; /* White text */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #32cd32; /* Green background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #228b22; /* Darker green on hover */
+}
+
+p#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.palindrome {
+    color: #32cd32; /* Green for palindrome result */
+    font-weight: bold;
+}
+
+.not-palindrome {
+    color: #ff6347; /* Tomato red for not palindrome result */
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #98fb98; /* Light green for footer text */
+}

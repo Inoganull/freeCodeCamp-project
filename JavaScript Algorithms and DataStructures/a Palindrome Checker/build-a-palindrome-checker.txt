@@ -1,0 +1,158 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PALINDROME CHECKER</h1>
+        <p class="description">A "Palindrome" is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run.</p>
+        
+        <div class="card">
+            <input type="text" id="text-input" placeholder="Enter text here">
+            <button id="check-btn">Check!</button>
+        </div>
+
+        <div class="card">
+            <p id="result"></p>
+        </div>
+        
+        <footer>freeCodeCamp project by Jin</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #98fb98; /* Light green for description text */
+}
+
+.card {
+    background-color: #222; /* Dark gray background for cards */
+    border: 1px solid #333; /* Slightly lighter gray for border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for card effect */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #000; /* Black input background */
+    color: #fff; /* White text */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #32cd32; /* Green background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #228b22; /* Darker green on hover */
+}
+
+p#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.palindrome {
+    color: #32cd32; /* Green for palindrome result */
+    font-weight: bold;
+}
+
+.not-palindrome {
+    color: #ff6347; /* Tomato red for not palindrome result */
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #98fb98; /* Light green for footer text */
+}
+
+
+** end of undefined **
+
+** start of undefined **
+
+const inputBox = document.getElementById("text-input");
+const outputBox = document.getElementById("result");
+const checkButton = document.getElementById("check-btn");
+
+function isPalindrome(str) {
+	let alphanumString = str.replace(/\W|_|\s/g, "").toLowerCase();
+
+	return alphanumString === alphanumString.split("").reverse().join("");
+		
+}
+
+function renderOutput() {
+	if (inputBox.value === "") {
+		alert("Please input a value");
+	} else {
+		const isPal = isPalindrome(inputBox.value);
+		const inputValue = `<span class="${isPal ? 'palindrome' : 'not-palindrome'}">${inputBox.value}</span>`;
+		const resultText = isPal
+			? `${inputValue} is a palindrome`
+			: `${inputValue} is not a palindrome`;
+			outputBox.innerHTML = resultText;
+	}
+}
+
+checkButton.addEventListener("click", renderOutput);
+
+
+
+** end of undefined **
+
