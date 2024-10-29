@@ -1,0 +1,99 @@
+html{
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #282828);
+    color: white;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+input, button {
+    width: 50%   ;
+    height: 50px;
+    border-radius: 28px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    transition: all 0.375s;
+}
+
+button {
+    cursor: pointer;
+    width: 40%;
+    height: 50px;
+    padding: 0 16px;
+    background: #0c203f;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 10px;
+    transition: all 0.375s;
+}
+
+h2{
+    color: #00FF99;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p{
+    color: #d8d508;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.card{
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: auto;
+    margin: 0 20px;
+    padding: 20px 30px 38px;
+    border-radius: 1.25rem;
+    background: #050505;
+    text-align: center;
+}
+
+.info {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards;
+}
+
+.info:nth-child(1) { animation-delay: 0.5s; }
+.info:nth-child(2) { animation-delay: 1s; }
+.info:nth-child(3) { animation-delay: 1.5s; }
+.info:nth-child(4) { animation-delay: 2s; }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
